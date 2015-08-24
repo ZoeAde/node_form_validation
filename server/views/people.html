@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+
+  <p class="alert alert-success">{{success}}</p>
+
+    <h1>All People</h1>
+
+
+    <table class="table table-striped table-bordered">
+      <thead>
+        <th>Name</th>
+        <th>Hobby</th>
+      </thead>
+      <tbody>
+      {% for person in people %}
+        <tr>
+          <td>{{person.name}}</td>
+          <td>{{person.hobby}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+</div>
+
+{% endblock %}
